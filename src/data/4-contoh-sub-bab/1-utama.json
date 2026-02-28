@@ -1,0 +1,24 @@
+{
+    "title": "Bab Kalam Utama",
+    "titleArabic": "بَابُ الكَلَامِ",
+    "level": "Mutaqaddim",
+    "fullTranslation": "Ini adalah pengenalan dari Bab Kalam, yang merupakan induk dari penjelasan kalam dalam nahwu.",
+    "textData": [
+        [
+            {
+                "arabic": "الكَلاَمُ",
+                "terjemahan": "Kalam",
+                "is_ngalogat": true,
+                "makna_ngalogat": "utawi kalam",
+                "simbol_ngalogat": "m",
+                "tasykil_options": [
+                    "الكَلاَمُ",
+                    "الكَلَامَ"
+                ],
+                "correct_tasykil": "الكَلاَمُ",
+                "tasykil_explanation": "Mubtada' marfu'"
+            }
+        ]
+    ],
+    "quizData": []
+}

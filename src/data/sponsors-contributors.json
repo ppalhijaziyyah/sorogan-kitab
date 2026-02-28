@@ -1,0 +1,43 @@
+
+[
+  {
+    "id": 1,
+    "name": "Sponsor Satu",
+    "avatar": "https://i.pravatar.cc/150?u=sponsor1",
+    "amount": 5000000,
+    "type": "sponsor",
+    "profileUrl": "#"
+  },
+  {
+    "id": 2,
+    "name": "Sponsor Dua",
+    "avatar": "https://i.pravatar.cc/150?u=sponsor2",
+    "amount": 2500000,
+    "type": "sponsor",
+    "profileUrl": "#"
+  },
+  {
+    "id": 3,
+    "name": "Kontributor Ahli",
+    "avatar": "https://i.pravatar.cc/150?u=contributor1",
+    "contributionCount": 12,
+    "type": "contributor",
+    "profileUrl": "#"
+  },
+  {
+    "id": 4,
+    "name": "Penyumbang Materi",
+    "avatar": "https://i.pravatar.cc/150?u=contributor2",
+    "contributionCount": 8,
+    "type": "contributor",
+    "profileUrl": "#"
+  },
+  {
+    "id": 5,
+    "name": "Sponsor Tiga",
+    "avatar": "https://i.pravatar.cc/150?u=sponsor3",
+    "amount": 1000000,
+    "type": "sponsor",
+    "profileUrl": "#"
+  }
+]

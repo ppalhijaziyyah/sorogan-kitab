@@ -1,0 +1,326 @@
+{
+    "id": "import-1771337072206",
+    "title": "Rukun Islam",
+    "titleArabic": "اركان الإسلام",
+    "level": "Ibtida’i",
+    "fullTranslation": "tes terjemah lengkap",
+    "reference": "متن سفينة النجاة",
+    "textData": [
+        [
+            {
+                "berharakat": "(فَصْلٌ)",
+                "gundul": "(فصل)",
+                "terjemahan": "Pasal",
+                "irab": "خبر من مبتدإ محذوف تقديره (هذا فصل)",
+                "link": "",
+                "nga_logat": [
+                    {
+                        "symbol": "خ",
+                        "position": "top-right"
+                    }
+                ],
+                "tasykil_options": [
+                    "(فَصْلُ)",
+                    "(فَصْلٍ)",
+                    "(فَصِلٌ)"
+                ]
+            },
+            {
+                "berharakat": "أَرْكَانُ",
+                "gundul": "أركان",
+                "terjemahan": "(Adapun) rukun",
+                "irab": "مبتدأ مرفوع بالضمة في جمع التكسير وهي مضاف",
+                "link": "",
+                "nga_logat": [
+                    {
+                        "symbol": "م",
+                        "position": "top-right"
+                    }
+                ],
+                "tasykil_options": [
+                    "أَرْكَانِ",
+                    "أَرْكَانَ"
+                ]
+            },
+            {
+                "berharakat": "الْإِسْلَامِ",
+                "gundul": "الإسلام",
+                "terjemahan": "Islam",
+                "irab": "مضاف إليه مجرور بالكسرة في الاسم المفرد",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "الْإِسْلَامُ",
+                    "الْإِسْلَامَ"
+                ]
+            },
+            {
+                "berharakat": "خَمْسَةٌ",
+                "gundul": "خمسة",
+                "terjemahan": " (itu ada) lima ",
+                "irab": "خبر مرفوع بالضمة في الاسم المفرد",
+                "link": "",
+                "nga_logat": [
+                    {
+                        "symbol": "خ",
+                        "position": "top-right"
+                    }
+                ],
+                "tasykil_options": [
+                    "خَمْسَةً",
+                    "خَمْسَةٍ"
+                ]
+            },
+            {
+                "berharakat": "شَهَادَةُ",
+                "gundul": "شهادة",
+                "terjemahan": "(yaitu) (1) bersaksi",
+                "irab": "(شَهَادَةُ أن لا إلٰه إلا الله) خبر من مبتدإ محذوف تقديره (هي)؛ و(شهادة) مرفوع بالضمة في الاسم المفرد وهي معطوف عليه ومضاف ",
+                "link": "",
+                "nga_logat": [
+                    {
+                        "symbol": "خ",
+                        "position": "top-right"
+                    }
+                ],
+                "tasykil_options": [
+                    "شَهَادَةِ",
+                    "شَهَادَةَ"
+                ]
+            },
+            {
+                "berharakat": "أَنْ لَا إِلٰهَ إِلّا اللّهُ",
+                "gundul": "أن لا إله إلّا اللّه",
+                "terjemahan": "bahwa tiada Tuhan selain Allah",
+                "irab": "مضاف إليه في محل الجر وهو معطوف\nعليه؛ و(أن) مصدرية، (لا) نافية للجنس، (إله) اسم (لا) منصوب بالفتحة في الاسم المفرد\nوخبره محذوف تقديره (معبود بحق)؛ و(إلّا الله) بدل مرفوع من خبر محذوف (إلا) أداة االستثناء؛\nو(الله) مستثنى.",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "أَنْ لَا إِلٰهَ إِلّا اللّهِ",
+                    "أَنْ لَا إِلٰهَ إِلّا اللّهَ"
+                ]
+            },
+            {
+                "berharakat": "وَأَنَّ مُحَمَّدًا",
+                "gundul": "وأنّ محمّدا",
+                "terjemahan": "dan (bersaksi) bahwa sesungguhnya Nabi Muhammad",
+                "irab": "(و) حرف العطف؛ و(أن محمدا رسول الله) مضاف إليه في محل الجر وهو معطوف؛ و(أنّ) حرف التوكيد (محمدا) اسم (إن) منصوب بالفتحة في الاسم المفرد",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "وَأَنَّ مُحَمَّدٌا",
+                    "وَأَنَّ مُحَمَّدٍ"
+                ]
+            },
+            {
+                "berharakat": "رَسُوْلُ",
+                "gundul": "رسول",
+                "terjemahan": "(adalah) utusan/ rasul",
+                "irab": "خبر (إن) مرفوع بالضمة في الاسم المفرد وهو مضاف",
+                "link": "",
+                "nga_logat": [
+                    {
+                        "symbol": "خ",
+                        "position": "top-right"
+                    }
+                ],
+                "tasykil_options": [
+                    "رَسُوْلِ",
+                    "رَسُوْلَ"
+                ]
+            },
+            {
+                "berharakat": "اللّهِ",
+                "gundul": "اللّه",
+                "terjemahan": "Allah",
+                "irab": "مضاف إليه",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "اللّهَ",
+                    "اللّهُ"
+                ]
+            },
+            {
+                "berharakat": "وَإِقَامُ",
+                "gundul": "وإقام",
+                "terjemahan": "dan (2) menegakkan",
+                "irab": "(و) حرف العطف؛ و(إقام) مرفوع بالضمة في الاسم المفرد وهو معطوف ومضاف",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "وَإِقَامِ"
+                ]
+            },
+            {
+                "berharakat": "الصَّلَاةِ",
+                "gundul": "الصّلاة",
+                "terjemahan": "salat",
+                "irab": "مضاف إليه مجرور بالكسرة في الاسم المفرد",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "الصَّلَاةُ",
+                    "الصَّلَاةَ"
+                ]
+            },
+            {
+                "berharakat": "وَإِيْتَاءُ",
+                "gundul": "وإيتاء",
+                "terjemahan": "dan (3) menunaikan",
+                "irab": "(و) حرف العطف؛ و(إيتاء) مرفوع بالضمة في الاسم المفرد وهو معطوف ومضاف",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "وَإِيْتَاءِ",
+                    "وَإِيْتَاءَ"
+                ]
+            },
+            {
+                "berharakat": "الزَّكَاةِ",
+                "gundul": "الزّكاة",
+                "terjemahan": "zakat",
+                "irab": "مضاف إليه مجرور بالكسرة في الاسم المفرد",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "الزَّكَاةَ",
+                    "الزَّكَاةُ"
+                ]
+            },
+            {
+                "berharakat": "وَصَوْمُ",
+                "gundul": "وصوم",
+                "terjemahan": "dan (4) puasa",
+                "irab": "(و) حرف العطف؛ و(صوم) مرفوع بالضمة في الاسم المفرد وهو معطوف ومضاف",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "وَصَوْمِ",
+                    "وَصَوْمَ"
+                ]
+            },
+            {
+                "berharakat": "رَمَضَانَ",
+                "gundul": "رمضان",
+                "terjemahan": "(di bulan) ramadan",
+                "irab": "و(رمضان) مضاف إليه مجرور بالفتحة في الاسم غير المنصوف",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "رَمَضَانِ",
+                    "رَمَضَانً",
+                    "رَمَضَانُ"
+                ]
+            },
+            {
+                "berharakat": "وَحِجُّ",
+                "gundul": "وحجّ",
+                "terjemahan": "dan (5) haji",
+                "irab": "(و) حرف العطف؛ و(حج) مرفوع بالضمة في الاسم المفرد وهو مضاف",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "وَحِجِّ",
+                    "وَحِجَّ"
+                ]
+            },
+            {
+                "berharakat": "الْبَيْتِ",
+                "gundul": "البيت",
+                "terjemahan": "(ke) Baitullah",
+                "irab": "مضاف إليه مجرور بالكسرة في الاسم المفرد",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "الْبَيْتُ",
+                    "الْبَيْتَ"
+                ]
+            },
+            {
+                "berharakat": "مَنْ",
+                "gundul": "من",
+                "terjemahan": "bagi orang",
+                "irab": "اسم موصول",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "مِنْ"
+                ]
+            },
+            {
+                "berharakat": "اسْتَطَاعَ",
+                "gundul": "استطاع",
+                "terjemahan": "yang mampu",
+                "irab": "فعل ماض في محل النعت وفاعله مستتر تقديره (من)",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "اسْتَطَاعُ",
+                    "اسْتَطَاعِ",
+                    "اسْتُطَاعَ"
+                ]
+            },
+            {
+                "berharakat": "إِلَيْهِ",
+                "gundul": "إليه",
+                "terjemahan": "(berangkat) haji ke Baitullah",
+                "irab": "(إلى) حرف الجر؛ وضمير (ه) مبني في محل الجر يرجع إلى (حجّ البيت)",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": []
+            },
+            {
+                "berharakat": "سَبِيْلًا",
+                "gundul": "سبيلا",
+                "terjemahan": "(menempuh) perjalanannya.",
+                "irab": "تمييز منصوب بالفتحة في الاسم المفرد",
+                "link": "",
+                "nga_logat": [],
+                "tasykil_options": [
+                    "سَبَيَلًا",
+                    "سُبِيْلٌا"
+                ]
+            }
+        ]
+    ],
+    "quizData": [
+        {
+            "question": "Apa i'rab (kedudukan) kata \"خَمْسَةٌ\" dalam kalimat \"أَرْكَانُ الْإِسْلَامِ خَمْسَةٌ\"?",
+            "context": "",
+            "options": [
+                "Mubtada'",
+                "Khabar",
+                "Maf'ul bih",
+                "Mudlaf ilaih"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Kata \"خَمْسَةٌ\" (lima) berkedudukan sebagai khabar (predikat) dari mubtada' \"أَرْكَانُ\". Kalimat ini berbentuk jumlah ismiyyah (kalimat nominal) dengan struktur: أَرْكَانُ (mubtada'/subjek) + خَمْسَةٌ (khabar/predikat), yang berarti \"Rukun Islam (itu) lima.\""
+        },
+        {
+            "question": "Apa fungsi huruf \"أَنْ\" dalam frasa",
+            "context": "شَهَادَةُ أَنْ لَا إِلٰهَ إِلّا اللّهُ",
+            "options": [
+                "Huruf masdariyyah",
+                "Huruf nafi",
+                "Huruf jar",
+                "Huruf athaf"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Huruf \"أَنْ\" di sini adalah \"an masdariyyah\" yang berfungsi untuk mem-masdar-kan (membentuk kata benda abstrak dari) kalimat setelahnya. Bersama dengan kalimat \"لَا إِلٰهَ إِلّا اللّهُ\", ia membentuk makna masdar yang setara dengan \"bahwa tiada Tuhan selain Allah.\""
+        },
+        {
+            "question": "Apa i'rab kata \"شَهَادَةُ\" dalam frasa:",
+            "context": "شَهَادَةُ أَنْ لَا إِلٰهَ إِلّا اللّهُ",
+            "options": [
+                "Khabar dari mubtada' yang dibuang (mahdzuf)",
+                "Fa'il",
+                "Mubtada' yang khabar-nya dibuang",
+                "Badal"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Kata \"شَهَادَةُ\" (persaksian) berkedudukan sebagai khabar (predikat), sedangkan mubtada'-nya dibuang/dihilangkan (mahdzuf) yang takdirannya adalah \"هي\" (rukun-rukun yang lima tersebut yaitu). Struktur lengkapnya: [هي] شَهَادَةُ. Pola ini umum dalam bahasa Arab ketika menjelaskan rincian sesuatu yang telah disebutkan sebelumnya."
+        }
+    ],
+    "path": "data/1-ibtidai/2-1-rukun-islam.json"
+}

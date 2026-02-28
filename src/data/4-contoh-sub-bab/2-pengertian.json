@@ -1,0 +1,25 @@
+{
+    "title": "Sub Bab Pengertian",
+    "titleArabic": "ـ تَعْرِيْفُہُ",
+    "level": "Mutaqaddim",
+    "fullTranslation": "Pengertian kalam menurut istilah nahwu adalah lafadz yang tersusun yang berfaidah.",
+    "textData": [
+        [
+            {
+                "arabic": "هُوَ",
+                "terjemahan": "dia",
+                "is_ngalogat": true,
+                "makna_ngalogat": "utawi kalam",
+                "simbol_ngalogat": "m"
+            },
+            {
+                "arabic": "اللَّفْظُ",
+                "terjemahan": "Lafadz",
+                "is_ngalogat": true,
+                "makna_ngalogat": "iku lafadz",
+                "simbol_ngalogat": "kh"
+            }
+        ]
+    ],
+    "quizData": []
+}

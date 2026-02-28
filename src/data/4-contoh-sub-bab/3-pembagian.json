@@ -1,0 +1,25 @@
+{
+    "title": "Sub Bab Pembagian",
+    "titleArabic": "ـ تَقْسِيْمُہُ",
+    "level": "Mutaqaddim",
+    "fullTranslation": "Pembagian kalam ada tiga: Isim, Fi'il, dan Huruf.",
+    "textData": [
+        [
+            {
+                "arabic": "وَأَقْسَامُهُ",
+                "terjemahan": "Dan pembagiannya",
+                "is_ngalogat": true,
+                "makna_ngalogat": "utawi piro2 bagiane kalam",
+                "simbol_ngalogat": "m"
+            },
+            {
+                "arabic": "ثَلَاثَةٌ",
+                "terjemahan": "ada tiga",
+                "is_ngalogat": true,
+                "makna_ngalogat": "iku telu",
+                "simbol_ngalogat": "kh"
+            }
+        ]
+    ],
+    "quizData": []
+}

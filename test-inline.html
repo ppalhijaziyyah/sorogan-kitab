@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .word {
+    display: inline-flex;
+    vertical-align: middle;
+    background: #ccc;
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+</style>
+</head>
+<body style="line-height: 1.5; font-size: 30px;">
+  <p>
+    Some Arabic <span class="word">Word</span> text goes here.<br>
+    And here is the <span class="word" style="margin-bottom: 50px;">Second Word</span> line overlapping?
+  </p>
+  <script>
+    const rect1 = document.querySelectorAll('.word')[0].getBoundingClientRect();
+    const rect2 = document.querySelectorAll('.word')[1].getBoundingClientRect();
+    console.log("Difference in Y:", rect2.top - rect1.top);
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+{
+    "title": "Uji Coba Fitur Lengkap",
+    "titleArabic": "تجربة جميع الميزات",
+    "level": "Ibtida’i",
+    "textData": [
+        [
+            {
+                "berharakat": "الْعِلْمُ",
+                "gundul": "العلم",
+                "terjemahan": "Ilmu itu",
+                "irab": "مبتدأ مرفوع",
+                "nga_logat": [
+                    {
+                        "symbol": "م",
+                        "position": "top-right"
+                    }
+                ],
+                "link": "https://en.wikipedia.org/wiki/Knowledge",
+                "tasykil_options": [
+                    "الْعَلَمُ",
+                    "الْعِلْمَ"
+                ]
+            },
+            {
+                "berharakat": "نُورٌ",
+                "gundul": "نور",
+                "terjemahan": "adalah cahaya",
+                "irab": "خبر مرفوع",
+                "nga_logat": [
+                    {
+                        "symbol": "خ",
+                        "position": "top-left"
+                    }
+                ],
+                "tasykil_options": [
+                    "نُورًا",
+                    "نُورٍ"
+                ]
+            }
+        ],
+        [
+            {
+                "berharakat": "يُحِبُّ",
+                "gundul": "يحب",
+                "terjemahan": "mencintai",
+                "irab": "فعل مضارع",
+                "nga_logat": [
+                    {
+                        "symbol": "فعل",
+                        "position": "top"
+                    }
+                ],
+                "tasykil_options": [
+                    "يُحِبَّ",
+                    "يُحِبْ"
+                ]
+            },
+            {
+                "berharakat": "اللَّهُ",
+                "gundul": "الله",
+                "terjemahan": "Allah",
+                "irab": "فاعل مرفوع",
+                "nga_logat": [
+                    {
+                        "symbol": "فا",
+                        "position": "top-right"
+                    }
+                ],
+                "tasykil_options": [
+                    "اللَّهَ",
+                    "اللَّهِ"
+                ]
+            },
+            {
+                "berharakat": "المُحْسِنِينَ",
+                "gundul": "المحسنين",
+                "terjemahan": "orang-orang yang berbuat baik",
+                "irab": "مفعول به منصوب",
+                "nga_logat": [
+                    {
+                        "symbol": "مف",
+                        "position": "bottom-left"
+                    }
+                ]
+            }
+        ]
+    ],
+    "fullTranslation": "Ilmu itu adalah cahaya.\n(Dan) Allah mencintai orang-orang yang berbuat baik.",
+    "quizData": [
+        {
+            "question": "Apa arti kata 'Al-Ilmu'?",
+            "options": [
+                "Cahaya",
+                "Ilmu",
+                "Kegelapan",
+                "Buku"
+            ],
+            "correctAnswer": 1,
+            "context": "الْعِلْمُ نُورٌ",
+            "explanation": "'Al-Ilmu' (العلم) berarti Ilmu."
+        },
+        {
+            "question": "Siapakah yang dicintai Allah dalam kalimat kedua?",
+            "options": [
+                "Orang Jahat",
+                "Orang Kaya",
+                "Orang Berbuat Baik",
+                "Orang Miskin"
+            ],
+            "correctAnswer": 2,
+            "context": "يُحِبُّ اللَّهُ المُحْسِنِينَ",
+            "explanation": "'Al-Muhsinin' (المحسنين) berarti orang-orang yang berbuat baik."
+        }
+    ],
+    "reference": "Contoh Buatan AI",
+    "path": "data/1-ibtidai/x-1-uji-coba-fitur-lengkap.json"
+}
