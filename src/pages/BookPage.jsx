@@ -141,6 +141,8 @@ const BookPage = ({ setSliderState }) => {
     const [isQuizMode, setQuizMode] = useState(false);
     const [titleLanguageMode, setTitleLanguageMode] = useLocalStorage('sorogan_titleLanguageMode', 'latin'); // 'latin' or 'arabic'
 
+    const [globalFocusId, setGlobalFocusId] = useState(null);
+
     // Desktop collapsible sidebars
     const [isLeftSidebarCollapsed, setIsLeftSidebarCollapsed] = useLocalStorage('sorogan_leftSidebarCollapsed', false);
     const [isRightSidebarCollapsed, setIsRightSidebarCollapsed] = useLocalStorage('sorogan_rightSidebarCollapsed', false);
@@ -236,6 +238,16 @@ const BookPage = ({ setSliderState }) => {
         };
     }, [allChapters, isQuizMode, settings.isTasykilMode]);
 
+    // Auto-update globalFocusId appropriately when activeChapter changes in Focus Mode
+    useEffect(() => {
+        if (settings.isFocusMode && activeChapter) {
+            const activeChapterPrefix = `${activeChapter.id || activeChapter.title}-`;
+            if (!globalFocusId || !globalFocusId.startsWith(activeChapterPrefix)) {
+                setGlobalFocusId(`${activeChapter.id || activeChapter.title}-0`);
+            }
+        }
+    }, [settings.isFocusMode, activeChapter]);
+
 
 
     if (!allChapters || allChapters.length === 0) {
@@ -300,104 +312,106 @@ const BookPage = ({ setSliderState }) => {
             {/* TENGAH: Area Baca Utama (Continuous Scrolling) */}
             <main className={`flex-1 transition-all duration-300 ease-in-out px-4 md:px-8 max-w-5xl mx-auto min-w-0 pb-32`}>
 
-                {/* Sticky Header untuk Judul Bab Aktif - RATA TENGAH */}
+                {/* Sticky Header untuk Judul Bab Aktif & Mobile Triggers */}
                 <div
-                    className={`sticky z-30 transition-all duration-300 ease-in-out bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm w-full py-4 px-6 md:px-8 mb-4 flex items-center justify-center rounded-b-3xl mx-auto border-b border-gray-100 dark:border-slate-800 top-0`}
+                    className={`sticky z-30 transition-all duration-300 ease-in-out bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm w-[calc(100%+2rem)] -ml-4 md:w-full md:ml-0 py-3 md:py-4 px-4 md:px-8 mb-4 md:mb-6 flex items-center justify-between rounded-b-xl md:rounded-b-3xl border-b border-gray-200 dark:border-slate-800 top-0`}
                 >
+                    {/* Tombol TOC di Mobile (Kiri) */}
+                    <div className="md:hidden flex-none">
+                        <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
+                            <SheetTrigger asChild>
+                                <Button variant="ghost" size="icon" className="text-teal-700 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800">
+                                    <Menu className="h-6 w-6" />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent side="left" className="w-[300px] sm:w-[400px] flex flex-col pt-12">
+                                <SheetTitle className="sr-only">Daftar Isi</SheetTitle>
+                                <TableOfContents
+                                    chapters={allChapters}
+                                    onChapterSelect={handleSmoothScroll}
+                                    activeChapterTitle={activeChapter?.title}
+                                    languageMode={titleLanguageMode}
+                                    setLanguageMode={setTitleLanguageMode}
+                                />
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+
+                    {/* Judul Bab Tengah */}
                     <h1
-                        className={`text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${titleLanguageMode === 'arabic' ? 'from-teal-600 to-sky-600 font-arabic tracking-wide' : 'from-teal-600 to-emerald-600 tracking-tight'} text-center`}
+                        className={`text-lg md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${titleLanguageMode === 'arabic' ? 'from-teal-600 to-sky-600 font-arabic tracking-wide' : 'from-teal-600 to-emerald-600 tracking-tight'} text-center flex-1 line-clamp-1 px-2`}
                         dir={titleLanguageMode === 'arabic' ? "rtl" : "ltr"}
                     >
                         {stickyHeaderText}
                     </h1>
-                </div>
 
-                {/* Mobile Header with triggers (Dibawah Sticky Header Utama) */}
-                <div className="md:hidden flex justify-between items-center mb-6 z-20 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-2 rounded-lg shadow-sm border border-gray-100 dark:border-slate-800">
-                    <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
-                        <SheetTrigger asChild>
-                            <Button variant="ghost" size="sm" className="gap-2 text-teal-700 dark:text-teal-400">
-                                <Menu className="h-5 w-5" />
-                                <span>Daftar Isi</span>
-                            </Button>
-                        </SheetTrigger>
-                        <SheetContent side="left" className="w-[300px] sm:w-[400px] flex flex-col pt-12">
-                            <SheetTitle className="sr-only">Daftar Isi</SheetTitle>
-                            <TableOfContents
-                                chapters={allChapters}
-                                onChapterSelect={handleSmoothScroll}
-                                activeChapterTitle={activeChapter?.title}
-                                languageMode={titleLanguageMode}
-                                setLanguageMode={setTitleLanguageMode}
-                            />
-                        </SheetContent>
-                    </Sheet>
+                    {/* Tombol Pengaturan di Mobile (Kanan) */}
+                    <div className="md:hidden flex-none">
+                        <Sheet open={isToolbarOpen} onOpenChange={setIsToolbarOpen}>
+                            <SheetTrigger asChild>
+                                <Button variant="ghost" size="icon" className="text-teal-700 dark:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-800">
+                                    <Settings className="h-6 w-6" />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent side="right" className="w-[300px] sm:w-[400px] pt-12 overflow-y-auto">
+                                <SheetTitle className="sr-only">Pengaturan Baca</SheetTitle>
 
-                    <Sheet open={isToolbarOpen} onOpenChange={setIsToolbarOpen}>
-                        <SheetTrigger asChild>
-                            <Button variant="ghost" size="sm" className="gap-2 text-teal-700 dark:text-teal-400">
-                                <Settings className="h-5 w-5" />
-                                <span>Pengaturan</span>
-                            </Button>
-                        </SheetTrigger>
-                        <SheetContent side="right" className="w-[300px] sm:w-[400px] pt-12 overflow-y-auto">
-                            <SheetTitle className="sr-only">Pengaturan Baca</SheetTitle>
+                                <div className="flex items-center justify-between mb-6 border-b pb-2 border-teal-500/30">
+                                    <h2 className="text-xl font-bold text-teal-600 dark:text-teal-400">Pengaturan Baca</h2>
+                                    <ThemeToggle />
+                                </div>
 
-                            <div className="flex items-center justify-between mb-6 border-b pb-2 border-teal-500/30">
-                                <h2 className="text-xl font-bold text-teal-600 dark:text-teal-400">Pengaturan Baca</h2>
-                                <ThemeToggle />
-                            </div>
-
-                            <div className="flex flex-col h-full">
-                                {isAdvancedSettingsOpen ? (
-                                    <div className="flex flex-col h-full animate-in fade-in slide-in-from-right-4 duration-300">
-                                        <button
-                                            onClick={() => setIsAdvancedSettingsOpen(false)}
-                                            className="flex items-center gap-2 mb-4 text-sm font-bold text-gray-500 hover:text-teal-600 transition-colors w-fit rounded-lg py-1 pr-2"
-                                        >
-                                            <ChevronLeft className="w-5 h-5" /> Kembali
-                                        </button>
-                                        <DisplaySettings settings={settings} updateSettings={updateSettings} onReset={resetSettings} inline={true} isOpen={true} />
-                                    </div>
-                                ) : (
-                                    <div className="flex flex-col h-full animate-in fade-in slide-in-from-left-4 duration-300">
-                                        <LearningToolbar
-                                            settings={settings}
-                                            updateSettings={updateSettings}
-                                            onReset={resetSettings}
-                                            isSettingsOpen={true}
-                                            setSettingsOpen={() => { }}
-                                            lessonData={activeChapter || allChapters[0]}
-                                            showFullTranslation={showFullTranslation}
-                                            setShowFullTranslation={setShowFullTranslation}
-                                            compact={false}
-                                            onOpenAdvancedSettings={() => setIsAdvancedSettingsOpen(true)}
-                                        />
-
-                                        <div className="mt-6 flex flex-col gap-3">
-                                            {activeChapter?.textData?.some(p => p.some(w => w.tasykil_options?.length > 0)) && (
-                                                <Button
-                                                    onClick={() => updateSettings({ isTasykilMode: true })}
-                                                    className="w-full gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-6 text-lg rounded-xl shadow-lg transition-transform hover:scale-105 active:scale-95"
-                                                >
-                                                    <span className="font-arabic text-2xl mb-1">شَ</span> Mulai Mode Tasykil
-                                                </Button>
-                                            )}
-
-                                            {activeChapter?.quizData?.length > 0 && (
-                                                <Button
-                                                    onClick={() => setQuizMode(true)}
-                                                    className="w-full gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-6 text-lg rounded-xl shadow-lg transition-transform hover:scale-105 active:scale-95"
-                                                >
-                                                    <PlayCircle className="w-6 h-6" /> Mulai Kuis Ujian
-                                                </Button>
-                                            )}
+                                <div className="flex flex-col h-full">
+                                    {isAdvancedSettingsOpen ? (
+                                        <div className="flex flex-col h-full animate-in fade-in slide-in-from-right-4 duration-300">
+                                            <button
+                                                onClick={() => setIsAdvancedSettingsOpen(false)}
+                                                className="flex items-center gap-2 mb-4 text-sm font-bold text-gray-500 hover:text-teal-600 transition-colors w-fit rounded-lg py-1 pr-2"
+                                            >
+                                                <ChevronLeft className="w-5 h-5" /> Kembali
+                                            </button>
+                                            <DisplaySettings settings={settings} updateSettings={updateSettings} onReset={resetSettings} inline={true} isOpen={true} />
                                         </div>
-                                    </div>
-                                )}
-                            </div>
-                        </SheetContent>
-                    </Sheet>
+                                    ) : (
+                                        <div className="flex flex-col h-full animate-in fade-in slide-in-from-left-4 duration-300">
+                                            <LearningToolbar
+                                                settings={settings}
+                                                updateSettings={updateSettings}
+                                                onReset={resetSettings}
+                                                isSettingsOpen={true}
+                                                setSettingsOpen={() => { }}
+                                                lessonData={activeChapter || allChapters[0]}
+                                                showFullTranslation={showFullTranslation}
+                                                setShowFullTranslation={setShowFullTranslation}
+                                                compact={false}
+                                                onOpenAdvancedSettings={() => setIsAdvancedSettingsOpen(true)}
+                                            />
+
+                                            <div className="mt-6 flex flex-col gap-3">
+                                                {activeChapter?.textData?.some(p => p.some(w => w.tasykil_options?.length > 0)) && (
+                                                    <Button
+                                                        onClick={() => updateSettings({ isTasykilMode: true })}
+                                                        className="w-full gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-6 text-lg rounded-xl shadow-lg transition-transform hover:scale-105 active:scale-95"
+                                                    >
+                                                        <span className="font-arabic text-2xl mb-1">شَ</span> Mulai Mode Tasykil
+                                                    </Button>
+                                                )}
+
+                                                {activeChapter?.quizData?.length > 0 && (
+                                                    <Button
+                                                        onClick={() => setQuizMode(true)}
+                                                        className="w-full gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-6 text-lg rounded-xl shadow-lg transition-transform hover:scale-105 active:scale-95"
+                                                    >
+                                                        <PlayCircle className="w-6 h-6" /> Mulai Kuis Ujian
+                                                    </Button>
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
                 </div>
 
                 {/* Single Seamless Paper Container */}
@@ -408,8 +422,15 @@ const BookPage = ({ setSliderState }) => {
                             <article key={chapter.id || index} id={chapterId} className="scroll-mt-32 relative">
 
                                 <div className="mt-2">
-                                    <LessonContent lessonData={chapter} setSliderState={setSliderState} />
-                                    <FullTranslation text={chapter.fullTranslation || ''} isVisible={showFullTranslation} />
+                                    <LessonContent
+                                        lessonData={chapter}
+                                        setSliderState={setSliderState}
+                                        globalFocusId={globalFocusId}
+                                        setGlobalFocusId={setGlobalFocusId}
+                                    />
+                                    <div className={`transition-opacity duration-300 ${settings.isFocusMode ? 'paragraph-unfocused' : ''}`}>
+                                        <FullTranslation text={chapter.fullTranslation || ''} isVisible={showFullTranslation} />
+                                    </div>
                                 </div>
 
                                 {/* Pembatas antar bab */}
